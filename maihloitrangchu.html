@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <style>
+        .header-products a{
+            background-color: rgb(194, 23, 23);
+            border-radius: 2rem;
+            padding: 1rem 1rem;
+            color:rgb(204, 204, 216);
+            text-decoration: none;
+            margin: 0 10px;
+            display: inline-block;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .header-products a:hover {
+            background-color: darkred;
+            color: white;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 30px;
+        }
+        header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        nav ul {
+            list-style: none;
+            margin: 10;
+            padding: 0;
+            text-align: center;
+        }
+        nav li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+        .login-container {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+        }
+        .login-container a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+        .login-container a:hover, nav a:hover {
+            color: blue;
+        }
+        main {
+            padding: 20px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .product-item {
+            width: 250px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .product-item:hover {
+            transform: translateY(-5px);
+        }
+        .product-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .product-item h3 {
+            margin-top: 15px;
+            color: #333;
+        }
+        .product-item p {
+            margin-top: 10px;
+            color: green;
+        }
+        .product-item button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 20px;
+        }
+        .product-item button:hover {
+            background-color: blue;
+        }
+        .search-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .search-container input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+        .search-container input[type="text"]:focus {
+            border-color: red;
+        }
+        .search-container button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .search-container button:hover {
+            background-color: darkred;
+        }
+        .logo {
+            width: 0px;
+            height: 10px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .rounded-button {
+            background-color: white;
+            color: black;
+            padding: 5px 20px;
+            border: 2px solid red;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .rounded-button:hover {
+            background-color: white;
+            color: blue;
+        }
+        .support-links ul a:hover {    
+            color: blue;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="login-container">
+            
+        </div>
+
+        <img src="image/hinh.png" alt="Logo">
+        <h1>LoiCon Car Online</h1>
+        
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Tìm kiếm xe...">
+            <button onclick="searchCars()">Tìm Kiếm</button>
+        </div>
+
+        <div class="header-products">
+            <h3>Danh Mục Sản Phẩm</h3>
+            <ul>
+                <a href="xeOto.html"> Ô tô</a>
+                <a href="xeMoto.html">Mô tô</a>
+                <a href="đathang.html">Đặt Hàng</a>
+            </ul>
+        </div>
+    </header>
+     <main>
+        <section class="products">
+            <div class="product-item">
+            <img src="image/hinh1.png" alt="Toyota Camry">
+            <h3>Toyota Camry</h3>
+            <p>Giá: 830 triệu VND</p>
+            
+        </div>
+        <div class="product-item">
+            <img src="image/hinh2.png" alt="Honda Civic">
+            <h3>Honda Civic</h3>            
+            <p>Giá: 700 triệu VND</p>
+           
+        </div>
+        <div class="product-item">
+            <img src="image/hinh5.png" alt="Ford Focus">
+            <h3>Ford Focus</h3>            
+            <p>Giá: 700 triệu VND</p>
+            
+        </div>  
+        <div class="product-item">
+            <img src="image/hinh6.png" alt="Hyundai Sonata">
+            <h3>Hyundai Sonata</h3>
+            <p>Giá: 650 triệu VND</p>
+            
+        </div>
+        <!-- New entries -->
+        <div class="product-item">
+            <img src="image/hinh7.png" alt="Mazda 3">
+            <h3>Mazda 3</h3>
+            <p>Giá: 550 triệu VND</p>
+            
+        </div>
+        <div class="product-item">
+            <img src="image/hinh8.png" alt="Nissan Sentra">
+            <h3>Nissan Sentra</h3>
+            <p>Giá: 500 triệu VND</p>
+            
+        </div>
+        <div class="product-item">
+            <img src="image/hinh9.png" alt="Kia Optima">
+            <h3>Kia Optima</h3>
+            <p>Giá: 500 triệu VND</p>
+            
+        </div>
+        <div class="product-item">
+            <img src="image/hinh10.png" alt="Volkswagen Passat">
+            <h3>Volkswagen Passat</h3>
+            <p>Giá: 500 triệu VND</p>
+        </div>
+        <div class="product-item">
+            <img src="image/hinh11.png" alt="Peugeot 508">
+            <h3>Peugeot 508</h3>
+            <p>Giá: 600 triệu VND</p>
+        </div>
+        <div class="product-item">
+            <img src="image/hinh12.png" alt="Fiat 500">
+            <h3>Fiat 500</h3>
+            <p>Giá: 600 triệu VND</p>
+           
+        </div>
+        <div class="product-item">
+            <img src="image/hinh29.png" alt="Suzuki Swift">
+            <h3>Suzuki Swift</h3>
+            <p>Giá: 600 triệu VND</p>
+        </div>
+        <div class="product-item">
+            <img src="image/hinh33.png" alt="Mercedes-Benz C-Class">
+            <h3>Mercedes-Benz C-Class</h3>
+            <p>Giá: 600 triệu VND</p>
+        </div>
+        <div class="product-item">
+            <img src="image/hinh34.png" alt="BMW 3 Series">
+            <h3>BMW 3 Series</h3>
+            <p>Giá: 600 triệu VND</p>
+        </div>
+        <div class="product-item">
+            <img src="image/hinh35.png" alt="Audi A4">
+            <h3>Audi A4</h3>
+            <p>Giá: 600 triệu VND</p>
+           
+        </div>
+        <div class="product-item">
+            <img src="image/hinh36.png" alt="Volvo XC60">
+            <h3>Volvo XC60</h3>
+            <p>Giá: 600 triệu VND</p>
+            
+        </div>
+        <div class="product-item">
+            <img src="image/hinh14.png" alt="Lexus IS">
+            <h3>Lexus IS</h3>
+            <p>Giá: 800 triệu VND</p>
+            
+        </div>
+        <div class="product-item">
+            <img src="image/hinh16.png" alt="Jaguar XE">
+            <h3>Jaguar XE</h3>
+            <p>Giá: 600 triệu VND</p>
+            
+        </div>
+        <div class="product-item">
+            <img src="image/hinh17.png" alt="Chevrolet Cruze">
+            <h3>Chevrolet Cruze</h3>
+            <p>Giá: 400 triệu VND</p>
+            
+        </div>
+        <div class="product-item">
+            <img src="image/hinh18.png" alt="Toyota Corolla">
+            <h3>Toyota Corolla</h3>
+            <p>Giá: 700 triệu VND</p>
+           
+       </div>
+    
+      </div>
+       <div class="product-item">
+           <img src="image/hinh20.png" alt="Chevrolet Malibu">
+           <h3>Chevrolet Malibu</h3>
+           <p>Giá: 1,2 tỷ VND</p>
+           
+      </div>
+      <div class="product-item">
+            <img src="image/hinh26.png" alt="Ford Taurus">
+            <h3>Ford Taurus</h3>
+            <p>Giá: 1 tỷ VND</p>
+            
+       </div>
+        <div class="product-item">
+            <img src="image/hinh27.png" alt="Subaru Legacy">
+            <h3>Subaru Legacy</h3>
+            <p>Giá: 750 triệu VND</p>
+            
+        </div>
+        <div class="product-item">
+            <img src="image/hinhf.png" alt="Volkswagen Jetta">
+            <h3>Volkswagen Jetta</h3>
+            <p>Giá: 830 triệu VND</p>
+            
+        </div>
+        </section>
+    </main>
+    
+    <script>
+        var redirectButton1 = document.getElementById('redirectButton1');
+        var redirectButton2 = document.getElementById('redirectButton2');
+        var redirectButton3 = document.getElementById('redirectButton3');
+        
+    </script>
+
+    <script>
+        function searchCars() {
+            var input = document.getElementById('search-input').value.toLowerCase();
+            var products = document.getElementsByClassName('product-item');
+            
+            for (var i = 0; i < products.length; i++) {
+                var productName = products[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+                if (productName.includes(input)) {
+                    products[i].style.display = '';
+                } else {
+                    products[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+	 <script>
+        function toggleForm(form) {
+            var loginForm = document.getElementById('login-form');
+            var registerForm = document.getElementById('register-form');
+            var loginToggle = document.getElementById('login-toggle');
+            var registerToggle = document.getElementById('register-toggle');
+
+            if (form === 'login') {
+                loginForm.classList.remove('hidden');
+                registerForm.classList.add('hidden');
+                loginToggle.classList.add('active');
+                registerToggle.classList.remove('active');
+            } else {
+                loginForm.classList.add('hidden');
+                registerForm.classList.remove('hidden');
+                loginToggle.classList.remove('active');
+                registerToggle.classList.add('active');
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            toggleForm('login');
+        });
+
+        function handleLogin(event) {
+            event.preventDefault();
+            window.location.href = "xeMoto.html"; 
+        }
+
+        function handleRegister(event) {
+            event.preventDefault();
+            window.location.href = "xeMoto.html"; 
+        }
+    </script> 
+    <footer class="footer">
+        <p><b>Bản quyền © 2024 LoiCon car online, đã đăng ký, bảo lưu mọi quyền.<b></p>
+    </footer>
+</body>
+</html>

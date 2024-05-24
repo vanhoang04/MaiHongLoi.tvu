@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mua Hàng Thành Công</title>
+    <style>
+	  body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .cover-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .logo {
+            margin-top: 20px;
+            width: 450px;
+            height: auto;
+        }
+        h1 {
+            color: blue;
+            margin-top: 40px;
+        }
+        p {
+            margin-bottom: 70px;
+			color: blue;
+        }
+        header a {
+            text-decoration: none;
+            color: blue;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+          
+    <header>
+        <a href="#" onclick="goBack()">
+           <img src="image\hinh.png" alt="LoiCon Car Online" class="logo">
+        </a>
+        
+    </header>
+    <h1>Cảm ơn bạn đã mua hàng!</h1>
+    <p>Thông tin mua hàng của bạn đã được ghi nhận thành công.</p>
+    <a href="maihloitrangchu.html">Quay lại trang chủ</a>
+	<script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

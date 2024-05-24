@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Đặt Hàng</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    .logo {
+    margin-top: 20px;
+    width: 300px; 
+    height: auto;
+}
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #7ac50029;
+    }
+    header {
+      background-color: #fff;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+    .back-button {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      width: 30px;
+      height: 30px;
+    }
+    .logo {
+      margin-top: 20px; 
+      color: #333;
+      font-size: 36px; 
+      font-weight: bold; 
+    }
+    h1, h2 {
+      margin-top: 20px;
+      color: #333;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    nav li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: blue;
+    }
+    form {
+      width: 80%;
+      max-width: 500px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+    input[type="number"] {
+      width: calc(100% - 22px);
+    }
+    button[type="submit"] {
+      background-color: red;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+    button[type="submit"]:hover {
+      background-color: blue;
+    }
+    .rounded-button {
+      background-color: white;
+      color: black;
+      padding: 5px 20px;
+      border: 2px solid red;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .rounded-button:hover {
+      background-color: white;
+      color: blue;
+    }
+    footer {
+      background-color: #ffffff;
+      color: #333;
+      text-align: center;
+      padding: 20px 0;
+      box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+<header>
+    <a href="#" onclick="goBack()">
+       
+    </a>
+    <img src="image/hinh.png" alt="LoiCon Car Online" class="logo">
+</header>
+
+<h2>Đặt Hàng</h2>
+<form id="order-form">
+  <label for="name">Họ và tên:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="address">Địa chỉ:</label>
+  <input type="text" id="address" name="address" required>
+
+  <label for="phone">Số điện thoại:</label>
+  <input type="tel" id="phone" name="phone" required>
+
+  <label for="size">Tên Xe:</label>
+  <select id="size" name="size" required>
+    <option value="Toyota Camry">Toyota Camry</option>
+    <option value="Honda Civic">Honda Civic</option>
+    <option value="Ford Focus">Ford Focus</option>
+    <option value="Hyundai Sonata">Hyundai Sonata</option>
+    <option value="Mazda 3">Mazda 3</option>
+    <option value="Nissan Sentra">Nissan Sentra</option>
+    <option value="Kia Optima">Kia Optima</option>
+    <option value="Volkswagen Passat">Volkswagen Passat</option>
+    <option value="Peugeot 508">Peugeot 508</option>
+    <option value="Fiat 500">Fiat 500</option>
+    <option value="Suzuki Swift">Suzuki Swift</option>
+    <option value="Mercedes-Benz C-Class">Mercedes-Benz C-Class</option>
+    <option value="BMW 3 Series">BMW 3 Series</option>
+    <option value="Audi A4">Audi A4</option>
+    <option value="Volvo XC60">Volvo XC60</option>
+    <option value="Lexus IS">Lexus IS</option>
+    <option value="Jaguar XE">Jaguar XE</option>
+    <option value="Chevrolet Cruze">Chevrolet Cruze</option>
+    <option value="Toyota Corolla">Toyota Corolla</option>
+    <option value="Chevrolet Malibu">Chevrolet Malibu</option>
+    <option value="Subaru Legacy">Subaru Legacy</option>
+    <option value="Volkswagen Jetta">Volkswagen Jetta</option>
+  </select>
+
+  <label for="quantity">Số lượng:</label>
+  <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+  <button type="submit">Mua Hàng</button>
+</form>
+<script>
+  function goBack() {
+    window.history.back();
+  }
+
+  document.getElementById('order-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Ngăn chặn form gửi thông tin theo cách thông thường
+
+    // Thu thập thông tin người mua
+    var buyerName = document.getElementById('name').value;
+    var buyerEmail = document.getElementById('email').value;
+    var buyerAddress = document.getElementById('address').value;
+    var buyerPhone = document.getElementById('phone').value;
+    var carName = document.getElementById('size').value;
+    var quantity = document.getElementById('quantity').value;
+
+    // Kiểm tra thông tin đã được điền đầy đủ
+    if (buyerName && buyerEmail && buyerAddress && buyerPhone && carName && quantity) {
+      // Chuyển hướng đến trang mua hàng thành công
+      window.location.href = 'muahangtc.html';
+    } else {
+      alert('Vui lòng điền đầy đủ thông tin!');
+    }
+  });
+</script>
+<footer>
+    <div class="container">
+        <p><b>Bản quyền &copy; 2024 Hướng dẫn mua hàng. Đã đăng ký. Bảo lưu mọi quyền.<b></p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <style>
+     .back {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: orange;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .back a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .back a:hover {
+            color: yellow;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 30px;
+        }
+        header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+        .login-container {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+        }
+        .login-container a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+        .login-container a:hover, nav a:hover {
+            color: blue;
+        }
+        main {
+            padding: 20px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .product-item {
+            width: 250px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .product-item:hover {
+            transform: translateY(-5px);
+        }
+        .product-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .product-item h3 {
+            margin-top: 15px;
+            color: #333;
+        }
+        .product-item p {
+            margin-top: 10px;
+            color: green;
+        }
+        .product-item button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 20px;
+        }
+        .product-item button:hover {
+            background-color: blue;
+        }
+        .search-container {
+            position: relative;
+            margin-left: 20px;
+        }
+        .search-container input[type=text],
+        .search-container select {
+            width: 200px;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+        .search-container input[type=text]:focus {
+            border-color: red;
+        }
+        .search-container button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .search-container button:hover {
+            background-color: darkred;
+        }
+        .search-results {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 200px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-top: none;
+            display: none;
+        }
+        .search-results ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .search-results li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+        }
+        .search-results li:last-child {
+            border-bottom: none;
+        }
+        .search-results li:hover {
+            background-color: #f0f0f0;
+        }
+        .logo {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .rounded-button {
+            background-color: white;
+            color: black;
+            padding: 5px 20px;
+            border: 2px solid red;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .rounded-button:hover {
+            background-color: white;
+            color: blue;
+        }
+        .support-links ul a:hover {
+            color: blue;
+        }
+        .footer {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<header>
+    <header class="back">
+    <a href="maihloitrangchu.html">Trang Chủ</a>
+    
+    </header>
+
+</header>
+<body>
+   
+        <section class="products">
+            <div class="product-item">
+            <img src="image/hinh14.png" alt="Lexus IS">
+            <h3>Lexus IS</h3>
+            <p>Giá: 800 triệu VND</p>
+            
+        </div>
+        <div class="product-item">
+            <img src="image/hinh16.png" alt="Jaguar XE">
+            <h3>Jaguar XE</h3>
+            <p>Giá: 600 triệu VND</p>
+           
+        </div>
+        <div class="product-item">
+            <img src="image/hinh17.png" alt="Chevrolet Cruze">
+            <h3>Chevrolet Cruze</h3>
+            <p>Giá: 400 triệu VND</p>
+            
+        </div>
+        <div class="product-item">
+            <img src="image/hinh18.png" alt="Toyota Corolla">
+            <h3>Toyota Corolla</h3>
+            <p>Giá: 700 triệu VND</p>
+            
+       </div>
+       <div class="product-item">
+           <img src="image/hinh18.png" alt="Honda Accord">
+           <h3>Honda Accord</h3>
+           <p>Giá: 700 triệu VND</p>
+          
+      </div>
+       <div class="product-item">
+           <img src="image/hinh20.png" alt="Chevrolet Malibu">
+           <h3>Chevrolet Malibu</h3>
+           <p>Giá: 1,2 tỷ VND</p>
+           
+      </div>
+      <div class="product-item">
+            <img src="image/hinh26.png" alt="Ford Taurus">
+            <h3>Ford Taurus</h3>
+            <p>Giá: 1 tỷ VND</p>
+           
+       </div>
+        <div class="product-item">
+            <img src="image/hinh27.png" alt="Subaru Legacy">
+            <h3>Subaru Legacy</h3>
+            <p>Giá: 750 triệu VND</p>
+            
+        </div>
+        <div class="product-item">
+            <img src="image/hinhf.png" alt="Volkswagen Jetta">
+            <h3>Volkswagen Jetta</h3>
+            <p>Giá: 830 triệu VND</p>
+            
+        </div>
+        
+		</body>
+
+		</html>
